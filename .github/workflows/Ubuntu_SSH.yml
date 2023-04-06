@@ -28,6 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.0
+    timeout: 6h
     - name: Mask Code & Pin.
       run: |
         _Token=$(jq -r '.inputs.authtoken' $GITHUB_EVENT_PATH)
@@ -47,4 +48,4 @@ jobs:
       run: bash Ip.sh "${{ github.event.inputs.username }}"
     - name: Keep Alive.
       run: ping 127.0.0.1 > null
-      timeout: 6h
+    
