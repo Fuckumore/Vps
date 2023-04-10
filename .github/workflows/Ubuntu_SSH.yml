@@ -26,7 +26,7 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout: 6h
+    timeout-minutes: 9999
     steps:
     - uses: actions/checkout@v3.0.2
     - name: Mask Code & Pin.
